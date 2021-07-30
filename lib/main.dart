@@ -12,8 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Color(0xff121212),
+          ),
+          bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff121212)),
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Color(0xff121212),
+          )),
       home: Scaffold(
         extendBody: true,
         appBar: AppBar(title: Text('App bar Title')),
@@ -25,11 +30,12 @@ class MyApp extends StatelessWidget {
           },
           child: Icon(
             Icons.add,
-            // color: Colors.amber.shade800,
+            size: 35,
+            color: Colors.white,
           ),
         ),
         bottomNavigationBar: TabBarMaterialWidget(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       ),
     );
   }
