@@ -19,6 +19,7 @@ class _TabBarMaterialWidgetState extends State<TabBarMaterialWidget> {
   Widget build(BuildContext context) {
     return Container(
       child: BottomAppBar(
+        color: Colors.blue,
         shape: CircularNotchedRectangle(),
         notchMargin: 8,
         elevation: 5,
